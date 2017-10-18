@@ -1,0 +1,44 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="navbar navbar-fixed-top main-nav">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a routerLink="home" class="navbar-brand navbar-brand-my">
+        SMB
+      </a>
+    </div>
+    <div class="collapse navbar-collapse navbar-responsive-collapse" aria-expanded="false">
+      <ul class="nav navbar-nav">
+        <li class="dropdown"><a routerLink="home">Articles</a></li>
+        <li class="dropdown"><a routerLink="chart">Echarts</a></li>
+        <li class="dropdown"><a routerLink="map">Amap</a></li>
+        <li class="dropdown"><a routerLink="jsplumb">jsplumb</a></li>
+      </ul>
+      <ul *ngIf="true" class="nav navbar-nav navbar-right">
+        <li routerLinkActive="active"><a routerLink="login">Login</a></li>
+        <li routerLinkActive="active"><a routerLink="register">Register</a></li>
+      </ul>
+      <ul *ngIf="false" class="nav navbar-nav navbar-right">
+        <li routerLinkActive="active"><a routerLink="user">Welcome: XXX</a></li>
+        <li routerLinkActive="active"><a routerLink="manage">Console</a></li>
+        <li><a href="javascript:void(0)" (click)="doLogout">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="container main-container">
+  <router-outlet></router-outlet>
+</div>
+<div class="footer bs-footer">
+  <div class="container">
+    <div class="row">
+      <p>Powered by SMBlog</p>
+    </div>
+  </div>
+</div>
+
